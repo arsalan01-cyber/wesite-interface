@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign in</title>
+  <link rel="styleshet" href="style.css"
+</head>
+<body>
+  <h2>Sign in</h2>
+  <form onsubmit="return validateLogin()">
+    <label>Username:</label>
+    <input type="text" id="username" required><br><br>
+    
+    <label>Password:</label>
+    <input type="password" id="password" required>
+    <br><br>
+    <div class="link">
+      <a href="#">Forget Password</a>
+      <a href="#">Signup</a>
+    </div>
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+    function validateLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      // Dummy credentials
+      if (username === "admin" && password === "1234") {
+        window.location.href = "3dwebsite.html";
+        return false;
+      } else {
+        alert("Invalid credentials!");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
